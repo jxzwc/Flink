@@ -37,6 +37,7 @@ object WordCount {
     // output操作，输出到标准输出，stdout
     windowCount
       .print()
+    println("等待输入...")
 
     // 执行DAG
     env.execute()
