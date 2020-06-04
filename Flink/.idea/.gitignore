@@ -1,2 +1,15 @@
 # Default ignored files
-/workspace.xml
+.DS_Store
+target/
+.classpath
+.idea/
+.project
+.settings/
+.vscode/
+*.iml
+.metals/
+*.aux
+*.log
+*.toc
+*.synctex.gz
+*.out
