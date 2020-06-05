@@ -25,7 +25,7 @@ object HotItemsSql {
     val tableEnv = StreamTableEnvironment.create(env, settings)
 
     val stream: DataStream[UserBehavior] = env
-      .readTextFile("D:\\Git_WorkSpace\\Flink\\src\\main\\resources\\UserBehavior.csv")
+      .readTextFile("UserBehavior.csv绝对路径")
       .map(line => {
         val arr = line.split(",")
         UserBehavior(arr(0).toLong, arr(1).toLong, arr(2).toInt, arr(3), arr(4).toLong * 1000)

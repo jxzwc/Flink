@@ -26,7 +26,7 @@ object HotItemsTable {
     env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime)
     // 过滤出pv事件，并抽取时间戳
     val stream: DataStream[UserBehavior] = env
-      .readTextFile("D:\\Git_WorkSpace\\Flink\\src\\main\\resources\\UserBehavior.csv")
+      .readTextFile("UserBehavior.csv绝对路径")
       .map(line => {
         val arr = line.split(",")
         UserBehavior(arr(0).toLong,
